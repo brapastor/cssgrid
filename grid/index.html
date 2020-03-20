@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FILAS CSS GRID</title>
+    <title>DISPLAYS</title>
     <style>
         body{
             font-family: Arial;
@@ -26,7 +26,17 @@
             padding: 10px;
             border: 1px solid red;
         }
+        .item:nth-of-type(4){
+            background: blue;
+            overflow: auto;
+            display: grid;
+            grid-template:50px 50px 50px / 200px 200px 200px;
 
+        }
+        .item .item {
+            background: yellow;
+            overflow: unset;
+        }
     </style>
 </head>
 <body>
@@ -34,7 +44,13 @@
         <div class="item">contenido #1</div>
         <div class="item">contenido #2</div>
         <div class="item">contenido #3</div>
-        <div class="item">contenido #4</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+            <div class="item">subitem #5</div>
+        </div>
         <div class="item">contenido #5</div>
         <div class="item">contenido #6</div>
         <div class="item">contenido #7</div>
